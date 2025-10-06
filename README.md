@@ -2,11 +2,14 @@
 
 A customizable memory card game built with Python and Tkinter, featuring multilingual support and configurable settings.
 
+![Main menu](./data/screenshots/main_menu.png)
+![Game windows](./data/screenshots/game_window.png)
+
 ## Features
 
+- **Customizable**: Configure images (e.g., use your family pictures), sounds ("hurray" from your friend in WhatsApp), and avatars
 - **Multiplayer Support**: Up to 6 players with individual scoring and avatars
-- **Multilingual**: Supports German, English, and Spanish
-- **Customizable**: Configure images, sounds, avatars, and UI elements
+- **Multilingual**: Supports German, English, and Spanish. Extend it yourself!
 - **Sound Effects**: Optional audio feedback for matches
 - **Image Gallery**: Review matched images after completing the game
 
