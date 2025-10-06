@@ -1,0 +1,5 @@
+.venv/
+collage.jpg
+__pycache__/
+config.yaml
+icons*

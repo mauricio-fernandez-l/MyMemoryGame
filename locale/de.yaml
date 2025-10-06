@@ -1,0 +1,69 @@
+meta:
+  language_name: "Deutsch"
+
+menu:
+  language_label: "Sprache"
+  players_label: "Spieleranzahl"
+  folder_label: "Bildordner"
+  browse_button: "Durchsuchen…"
+  images_found: "Gefundene Bilder: {count}"
+  images_missing: "Keine gültigen Bilder gefunden."
+  sounds_found: "Gefundene Sounds: {count}"
+  pairs_label: "Anzahl Bilder (Paare)"
+  start_button: "Spiel starten"
+  names_button: "Namen und Avatare"
+  other_settings_button: "Weitere Einstellungen"
+  quit_button: "Beenden"
+  sound_toggle_on: "Sound an"
+  sound_toggle_off: "Sound aus"
+  select_folder_title: "Bildordner auswählen"
+
+names_dialog:
+  title: "Spielerprofil"
+  subtitle: "Namen und Avatare"
+  hint: "Lass Felder leer, um die Standardnamen zu verwenden."
+  player_label: "Spieler {index}"
+  done_button: "Fertig"
+
+settings_dialog:
+  title: "Weitere Einstellungen"
+  subtitle: "Sprache und Sounds"
+  hint: "Wähle eine Sprache und schalte Sounds nach Bedarf ein oder aus."
+  done_button: "Fertig"
+
+players:
+  default_name: "Spieler {index}"
+
+avatars:
+  menu_label: "Avatar"
+  none_available: "Keine Avatare verfügbar"
+  default_label: "Standard"
+
+buttons:
+  review_gallery: "Galerie"
+  back_to_menu: "Zurück zum Menü"
+
+gallery:
+  window_title: "Galerie"
+  heading: "Alle gefundenen Paare"
+  no_unique_paths: "Keine eindeutigen Bildpfade gefunden."
+  not_loaded: "Bild konnte\nnicht geladen werden"
+  found_by: "Gefunden von {player}"
+
+dialogs:
+  error_title: "Fehler"
+  invalid_folder: "Bitte wähle einen gültigen Ordner aus."
+  no_images: "Im ausgewählten Ordner wurden keine unterstützten Bilddateien gefunden."
+  invalid_pair_count: "Bitte wähle eine Anzahl zwischen 1 und {max_pairs}."
+  loading_error: "Es konnten nur {count} Bilder geladen werden. Bitte wähle weniger Paare aus."
+  gallery_empty_title: "Keine Daten"
+  gallery_empty_body: "Es wurden keine Bildinformationen gesammelt."
+  congrats_title: "Glückwunsch!"
+  single_player_win: "{name}, du hast alle Kartenpaare gefunden!"
+  multi_player_header_single: "{name} hat gewonnen mit {pairs} Paar(en)!"
+  multi_player_header_multi: "{names} teilen sich den Sieg mit {pairs} Paar(en)!"
+  multi_player_score_line: "{name}: {pairs} Paar(e)"
+
+scoreboard:
+  entry: "{name}: {score}"
+  player_label: "Spieler {index}"

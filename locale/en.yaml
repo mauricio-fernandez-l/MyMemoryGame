@@ -1,0 +1,69 @@
+meta:
+  language_name: "English"
+
+menu:
+  language_label: "Language"
+  players_label: "Number of players"
+  folder_label: "Image folder"
+  browse_button: "Browse…"
+  images_found: "Images found: {count}"
+  images_missing: "No valid images found."
+  sounds_found: "Sounds found: {count}"
+  pairs_label: "Number of image pairs"
+  start_button: "Start game"
+  names_button: "Names and avatars"
+  other_settings_button: "Other settings"
+  quit_button: "Quit"
+  sound_toggle_on: "Sound on"
+  sound_toggle_off: "Sound off"
+  select_folder_title: "Select image folder"
+
+names_dialog:
+  title: "Player profiles"
+  subtitle: "Names and avatars"
+  hint: "Leave fields empty to use the default names."
+  player_label: "Player {index}"
+  done_button: "Done"
+
+settings_dialog:
+  title: "Other settings"
+  subtitle: "Language and sounds"
+  hint: "Choose your preferred language and toggle sounds on or off."
+  done_button: "Done"
+
+players:
+  default_name: "Player {index}"
+
+avatars:
+  menu_label: "Avatar"
+  none_available: "No avatars available"
+  default_label: "Default"
+
+buttons:
+  review_gallery: "Gallery"
+  back_to_menu: "Back to menu"
+
+gallery:
+  window_title: "Gallery"
+  heading: "All matched pairs"
+  no_unique_paths: "No unique image paths found."
+  not_loaded: "Image could\nnot be loaded"
+  found_by: "Found by {player}"
+
+dialogs:
+  error_title: "Error"
+  invalid_folder: "Please choose a valid folder."
+  no_images: "No supported image files were found in the selected folder."
+  invalid_pair_count: "Please choose a number between 1 and {max_pairs}."
+  loading_error: "Only {count} images could be loaded. Please choose fewer pairs."
+  gallery_empty_title: "No data"
+  gallery_empty_body: "No image information has been collected."
+  congrats_title: "Congratulations!"
+  single_player_win: "{name}, you matched all card pairs!"
+  multi_player_header_single: "{name} won with {pairs} pair(s)!"
+  multi_player_header_multi: "{names} share the win with {pairs} pair(s)!"
+  multi_player_score_line: "{name}: {pairs} pair(s)"
+
+scoreboard:
+  entry: "{name}: {score}"
+  player_label: "Player {index}"
