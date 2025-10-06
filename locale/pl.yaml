@@ -1,0 +1,69 @@
+meta:
+  language_name: "Polski"
+
+menu:
+  language_label: "Język"
+  players_label: "Liczba graczy"
+  folder_label: "Folder z obrazami"
+  browse_button: "Przeglądaj…"
+  images_found: "Znalezione obrazy: {count}"
+  images_missing: "Nie znaleziono prawidłowych obrazów."
+  sounds_found: "Znalezione dźwięki: {count}"
+  pairs_label: "Liczba par obrazów"
+  start_button: "Rozpocznij grę"
+  names_button: "Imiona i awatary"
+  other_settings_button: "Inne ustawienia"
+  quit_button: "Wyjdź"
+  sound_toggle_on: "Dźwięk włączony"
+  sound_toggle_off: "Dźwięk wyłączony"
+  select_folder_title: "Wybierz folder z obrazami"
+
+names_dialog:
+  title: "Profile graczy"
+  subtitle: "Imiona i awatary"
+  hint: "Pozostaw pola puste, aby używać domyślnych imion."
+  player_label: "Gracz {index}"
+  done_button: "Gotowe"
+
+settings_dialog:
+  title: "Inne ustawienia"
+  subtitle: "Język i dźwięki"
+  hint: "Wybierz preferowany język i włącz lub wyłącz dźwięki."
+  done_button: "Gotowe"
+
+players:
+  default_name: "Gracz {index}"
+
+avatars:
+  menu_label: "Awatar"
+  none_available: "Brak dostępnych awatarów"
+  default_label: "Domyślny"
+
+buttons:
+  review_gallery: "Galeria"
+  back_to_menu: "Powrót do menu"
+
+gallery:
+  window_title: "Galeria"
+  heading: "Wszystkie dopasowane pary"
+  no_unique_paths: "Nie znaleziono unikalnych ścieżek obrazów."
+  not_loaded: "Obraz nie mógł\nzostaći wczytany"
+  found_by: "Znaleziono przez {player}"
+
+dialogs:
+  error_title: "Błąd"
+  invalid_folder: "Proszę wybrać prawidłowy folder."
+  no_images: "W wybranym folderze nie znaleziono obsługiwanych plików obrazów."
+  invalid_pair_count: "Proszę wybrać liczbę między 1 a {max_pairs}."
+  loading_error: "Można było wczytać tylko {count} obrazów. Proszę wybrać mniej par."
+  gallery_empty_title: "Brak danych"
+  gallery_empty_body: "Nie zebrano informacji o obrazach."
+  congrats_title: "Gratulacje!"
+  single_player_win: "{name}, dopasowałeś wszystkie pary kart!"
+  multi_player_header_single: "{name} wygrał z {pairs} parą(parami)!"
+  multi_player_header_multi: "{names} dzielą zwycięstwo z {pairs} parą(parami)!"
+  multi_player_score_line: "{name}: {pairs} para(pary)"
+
+scoreboard:
+  entry: "{name}: {score}"
+  player_label: "Gracz {index}"
