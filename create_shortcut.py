@@ -63,8 +63,10 @@ def resolve_path(path_value: str | None) -> Path:
     candidate = candidate.expanduser().resolve()
     if not candidate.exists():
         raise FileNotFoundError(f"Icon image not found: {candidate}")
-    if candidate.suffix.lower() != ".png":
-        raise ValueError(f"Shortcut image must be a .png file: {candidate}")
+    if candidate.suffix.lower() not in {".png", ".jpg", ".jpeg"}:
+        raise ValueError(
+            f"Shortcut image must be a .png, .jpg, or .jpeg file: {candidate}"
+        )
     return candidate
 
 
@@ -123,9 +125,9 @@ def find_python_executable() -> Path:
     return executable.resolve()
 
 
-def convert_png_to_ico(png_path: Path, ico_path: Path) -> Path:
+def convert_image_to_ico(image_path: Path, ico_path: Path) -> Path:
     ico_path.parent.mkdir(parents=True, exist_ok=True)
-    with Image.open(png_path) as img:
+    with Image.open(image_path) as img:
         img = img.convert("RGBA")
         max_dim = max(img.size)
         base_sizes = [256, 128, 96, 64, 48, 32, 24, 16]
@@ -179,7 +181,7 @@ def main() -> None:
     shortcut_cfg = config.get("shortcut", {})
 
     shortcut_name = title_cfg.get("text", "Memory")
-    png_path = resolve_path(shortcut_cfg.get("image"))
+    image_path = resolve_path(shortcut_cfg.get("image"))
 
     python_executable = find_python_executable()
     if not python_executable.exists():
@@ -189,7 +191,7 @@ def main() -> None:
     shortcut_path = get_desktop_path() / f"{sanitize_filename(shortcut_name)}.lnk"
     icon_path = BASE_DIR / "icons" / f"{sanitize_filename(shortcut_name)}.ico"
 
-    convert_png_to_ico(png_path, icon_path)
+    convert_image_to_ico(image_path, icon_path)
     create_shortcut(shortcut_path, python_executable, working_dir, icon_path)
 
     print(f"Shortcut created: {shortcut_path}")
