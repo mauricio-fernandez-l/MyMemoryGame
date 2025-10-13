@@ -15,28 +15,21 @@ A customizable memory card game built with Python and Tkinter, featuring multili
 
 ## Quick Start
 
-1. **Install Dependencies**:
-   Create local environment `.venv` in the repo root folder
-   ```shell
-   python -m venv .venv
-   ```
-   and install in it the dependencies
-   ```bash
-   pip install pillow pyyaml python-vlc
-   ```
-   Install VLC on your own for .opus audio file support.
+Run the automated installer that handles everything for you, either by double click or execution in the terminal
 
-2. **Create a configuration file**:
-   Creta a `config.yaml` file in this folder, see [Configuration](#configuration).
+```shell
+install.bat
+```
 
-3. **Run the Game**:
-   ```bash
-   python memory.py
-   ```
+and launch the game from your desktop with the created shortcut.
 
-4. **Select Image Folder**: Choose a folder containing your images (PNG, JPG, GIF, BMP)
-5. **Configure Players**: Set number of players, names, and avatars
-6. **Start Playing**: Match pairs of cards to score points!
+## Uninstallation
+
+To cleanly remove the Memory Game installation:
+
+```shell
+uninstall.bat
+```
 
 ## Configuration
 
@@ -84,34 +77,6 @@ ui:
     body:
       size: 10
       weight: normal
-```
-
-## Desktop Shortcut
-
-Create a Windows desktop shortcut with a custom icon:
-
-```bash
-python create_shortcut.py
-```
-
-**Requirements**:
-- Windows OS
-- The shortcut relies on a `.venv` locally created in the repo root folder.
-- Configure `shortcut.image` path in `config.yaml` (must be PNG format)
-- The script automatically converts PNG to ICO and creates the shortcut
-
-## File Structure
-
-```
-├── memory.py           # Main game application
-├── .venv/              # Python virtual environment
-├── config.yaml         # Configuration file
-├── create_shortcut.py  # Desktop shortcut creator
-├── i18n.py            # Internationalization module
-└── locale/            # Translation files
-    ├── de.yaml        # German translations
-    ├── en.yaml        # English translations
-    └── es.yaml        # Spanish translations
 ```
 
 ## Controls

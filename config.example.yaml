@@ -1,0 +1,29 @@
+language: en
+title:
+  text: "My Memory Game"
+  image:
+    path: 'data/images/star.png'
+    max_width: 520
+    max_height: 220
+shortcut:
+  image: 'data/images/star.png'
+layout:
+  bottom_border_fraction: 0.1
+media:
+  sounds:
+    folder: 'data/sounds'
+  avatars:
+    folder: 'data/avatars'
+  images:
+    folder: 'data/images'
+ui:
+  font:
+    title:
+      size: 20
+      weight: bold
+    emphasis:
+      size: 12
+      weight: bold
+    body:
+      size: 10
+      weight: normal
