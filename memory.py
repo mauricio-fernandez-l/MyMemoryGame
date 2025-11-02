@@ -290,6 +290,9 @@ AVATAR_EXTENSIONS = tuple(AVATARS_CONFIG.get("extensions", []))
 IMAGES_CONFIG = MEDIA_CONFIG.get("images", {})
 DEFAULT_IMAGE_FOLDER = IMAGES_CONFIG.get("folder", "")
 
+SHORTCUT_CONFIG = CONFIG.get("shortcut", {})
+SHORTCUT_IMAGE_PATH = _resolve_path(SHORTCUT_CONFIG.get("image", ""))
+
 UI_CONFIG = CONFIG.get("ui", {})
 FONT_CONFIG = UI_CONFIG.get("font", DEFAULT_CONFIG["ui"]["font"])
 
@@ -369,6 +372,8 @@ class MemoryApp:
             default_font_cfg["emphasis"],
         )
         self.ui_font_body = _build_font_tuple(body_cfg, default_font_cfg["body"])
+        self.window_icon = None
+        self.apply_window_icon()
         self.reset_game_state()
         self.init_menu_state()
         self.build_menu()
@@ -1567,6 +1572,24 @@ class MemoryApp:
                 return photo
         except Exception:
             return None
+
+    def apply_window_icon(self):
+        if not SHORTCUT_IMAGE_PATH:
+            return
+        icon_path = os.path.abspath(SHORTCUT_IMAGE_PATH)
+        cache_key = ("window_icon", icon_path)
+        icon_photo = self.image_cache.get(cache_key)
+        if icon_photo is None:
+            try:
+                with Image.open(icon_path) as img:
+                    img = ImageOps.exif_transpose(img)
+                    img = img.convert("RGBA")
+                    icon_photo = ImageTk.PhotoImage(img)
+            except Exception:
+                return
+            self.image_cache[cache_key] = icon_photo
+        self.root.iconphoto(True, icon_photo)
+        self.window_icon = icon_photo
 
     def prepare_cards(self):
         paired = random.sample(self.image_pool, self.num_pairs)
