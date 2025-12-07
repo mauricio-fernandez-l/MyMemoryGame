@@ -15,6 +15,7 @@ if not exist config.yaml (
     copy config.example.yaml config.yaml
 )
 echo Create desktop shortcut ...
+pip install pywin32
 python create_shortcut.py
 echo Done.
 pause
